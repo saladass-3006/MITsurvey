@@ -21,7 +21,7 @@ Array.from(document.getElementsByClassName('videos')).forEach(e=>
 
 for(let i=0;i<16;i++)
     {
-        document.getElementsByClassName('imageContainer')[i].style=`background: url('${images[i]}') no-repeat center center/contain;`
+        document.getElementsByClassName('imageContainer')[i].style=`background: url('${images[i]}') no-repeat center center/contain;`;
     }
 leftBtn.addEventListener('click', e => {
 
