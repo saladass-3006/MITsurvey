@@ -10,12 +10,19 @@ const carousalWhole = document.getElementsByClassName('carousalimage')[0];
 
 let distance=0;
 
+const images=['./images/laksPics/farewellKiss.jpg','./images/laksPics/tooManykisses.jpg','./images/laksPics/anniversaryPic.jpg','./images/laksPics/32ndGift.jpg','./images/laksPics/birthday.jpg','./images/laksPics/cakebake.jpg','','./images/laksPics/Despacito.jpg','','','./images/laksPics/pikachu.jpg','./images/laksPics/ILoveYou.jpg','./images/laksPics/pyaarAaya.jpg','./images/laksPics/duopic.jpg','','./images/laksPics/Mgmall.jpg','./images/laksPics/pixar.jpg'];
+
 Array.from(document.getElementsByClassName('videos')).forEach(e=>
     {
         e.innerHTML=`<div class="imageContainer">
                     
         </div>`;
     })
+
+for(let i=0;i<16;i++)
+    {
+        document.getElementsByClassName('imageContainer')[i].style=`background: url('${images[i]}') no-repeat center center/contain;`
+    }
 leftBtn.addEventListener('click', e => {
 
     const currentSlide=carousalWhole.querySelectorAll('.current-slide')[0];
@@ -112,6 +119,9 @@ proceed.addEventListener('click',e=>
     before.style=`display:none;`;
     after.style=`display:block;`;
 })
+
+
+
 
 
 
