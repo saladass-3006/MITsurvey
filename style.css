@@ -286,6 +286,13 @@
     overflow:hidden;
 }
 
+.videoPlayerNowPlaying
+{
+    width:450px;
+    height:600px;
+    
+}
+
 .text
 {
     grid-column-start: 1;
@@ -424,7 +431,7 @@
     {
         grid-template-columns: repeat(3,1fr);
     }
-    .carousal,.text,.playerText,.beforeVideo
+    .carousal,.text,.playerText,.beforeVideo,.videoPlayer
     {
         grid-column-start: 1;
         grid-column-end: 4;
@@ -437,7 +444,7 @@
     {
         grid-template-columns: repeat(2,1fr);
     }
-    .carousal,.text,.playerText,.beforeVideo
+    .carousal,.text,.playerText,.beforeVideo,.videoPlayer
     {
         grid-column-start: 1;
         grid-column-end: 3;
@@ -461,5 +468,17 @@
     {
         width:100%;
     }
+
+    .player
+    {
+        width:100%;
+    }
+
+    .playerText
+    {
+        width:100%;
+        font-size: 15px;
+    }
+
     
 }
