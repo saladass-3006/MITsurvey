@@ -174,7 +174,7 @@
 
 ::-webkit-scrollbar
 {
-    display:none;
+    /* display:none; */
 }
 
 .carousel_button_class
@@ -308,6 +308,7 @@
     /* border:2px solid red; */
     height:350px;
     background-color: rgb(48, 48, 48,0.5);
+    border:2px solid rgba(48, 48, 48, 0.116)
 }
 
 .videos:hover
@@ -346,6 +347,8 @@
 
 .imageContainer
 {
+    position:relative;
+    bottom: 0;
     height:75%;
     width:100%;
     border:2px solid white;
@@ -357,7 +360,7 @@
 }
 .afterconfirmationPage
 {
-    display:none;
+    display:block;
 }
 
 .beforeConfirmationPage
@@ -369,7 +372,7 @@
     color:white;
     font-size: 20px;
     line-height:100px;
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -384,8 +387,7 @@
     width:150px;
     height:50px;
     border-radius: 10px;
-    font-family: 'Roboto','ariel', sans-serif;
-    font-weight: bold;
+    
 }
 .proceed:hover
 {
@@ -396,4 +398,22 @@
 .text-confirmation
 {
     text-align:center;
+}
+
+.text-image
+{
+    height:25%;
+    /* border:2px solid red; */
+    width:100%;
+    display:flex;
+    color:white;
+    font-family: 'Roboto','ariel', sans-serif;
+    font-size:15px;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-image>p
+{
+    border-bottom: 2px solid white;
 }
