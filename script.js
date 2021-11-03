@@ -94,21 +94,20 @@ let VidArray=['','./videos_LaksuWeb/AllOutdoorVisits.mp4','./videos_LaksuWeb/Ind
 
 let videos=document.getElementsByClassName('videos');
 
-let videoPlayer=document.getElementsByClassName('videoPlayerNowPlaying')[0].getElementsByClassName('player')[0];
+let videoPlayer=document.getElementsByClassName('videoPlayerNowPlaying')[0];
 
 
 
 function playVideo(index)
 {
-    videoPlayer.innerHTML=`
+    videoPlayer.innerHTML=`<video width='450px' height='600px' autoplay controls class="player">
     <source src="${VidArray[index]}" type="video/mp4">
-    `;
+    </video>`;
     document.documentElement.scrollTop=0;
     videoPlayer.style=`display:block;`;
     document.getElementsByClassName('videoPlayer')[0].style='display:flex; justify-content:center';
     document.getElementsByClassName('carousal')[0].style=`display:none;`;
     document.getElementsByClassName('playerText')[0].style=`display:block`;
-    videoPlayer.style=`display:block`;
 }
 
 let before=document.getElementsByClassName('beforeConfirmationPage')[0];
