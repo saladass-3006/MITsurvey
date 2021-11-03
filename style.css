@@ -417,3 +417,49 @@
 {
     border-bottom: 2px solid white;
 }
+
+@media (max-width:1300px)
+{
+    .container_grid
+    {
+        grid-template-columns: repeat(3,1fr);
+    }
+    .carousal,.text,.playerText,.beforeVideo
+    {
+        grid-column-start: 1;
+        grid-column-end: 4;
+    }
+}
+
+@media (max-width:900px)
+{
+    .container_grid
+    {
+        grid-template-columns: repeat(2,1fr);
+    }
+    .carousal,.text,.playerText,.beforeVideo
+    {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+    .text
+    {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width:400px)
+{
+    .videos
+    {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+    .text
+    {
+        width:100%;
+    }
+    
+}
