@@ -108,6 +108,7 @@ function playVideo(index)
     document.getElementsByClassName('videoPlayer')[0].style='display:flex; justify-content:center';
     document.getElementsByClassName('carousal')[0].style=`display:none;`;
     document.getElementsByClassName('playerText')[0].style=`display:block`;
+    document.getElementsByClassName('text')[0].style="display:none";
 }
 
 let before=document.getElementsByClassName('beforeConfirmationPage')[0];
