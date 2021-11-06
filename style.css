@@ -477,12 +477,12 @@
         width:100%;
     }
 
-    .player
+    .player,.newhtml,.newhtml>video
     {
         width:100%;
     }
 
-    .playerText
+    .playerText,.newhtml-text
     {
         width:100%;
         font-size: 15px;
@@ -507,7 +507,7 @@
 .newhtml
 {
     background-color: hsl(0, 0%, 18.82%);
-    
+    height:100vh;
     display:flex;
     justify-content:center;
     align-items:center;
