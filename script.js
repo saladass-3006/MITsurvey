@@ -10,7 +10,7 @@ const carousalWhole = document.getElementsByClassName('carousalimage')[0];
 
 let distance=0;
 
-const images=['','./images/laksPics/outdoor.jpg','./images/laksPics/indoor.jpg','./images/laksPics/farewellKiss.jpg','./images/laksPics/tooManykisses.jpg','./images/laksPics/anniversaryPic.jpg','./images/laksPics/32ndGift.jpg','./images/laksPics/birthday.jpg','./images/laksPics/cakebake.jpg','./images/laksPics/dontbeangrybabyboo.jpg','./images/laksPics/Despacito.jpg','./images/laksPics/kuchhtohhai.jpg','./images/laksPics/ohno.jpg','./images/laksPics/pikachu.jpg','./images/laksPics/ILoveYou.jpg','./images/laksPics/pyaarAaya.jpg','./images/laksPics/duopic.jpg','./images/laksPics/lakskiss.jpg','./images/laksPics/Mgmall.jpg','./images/laksPics/pixar.jpg','./images/laksPics/justtheTwoOfUs.jpg'];
+const images=['./images/CP.jpg','./images/laksPics/outdoor.jpg','./images/laksPics/indoor.jpg','./images/laksPics/farewellKiss.jpg','./images/laksPics/tooManykisses.jpg','./images/laksPics/anniversaryPic.jpg','./images/laksPics/32ndGift.jpg','./images/laksPics/birthday.jpg','./images/laksPics/cakebake.jpg','./images/laksPics/dontbeangrybabyboo.jpg','./images/laksPics/Despacito.jpg','./images/laksPics/kuchhtohhai.jpg','./images/laksPics/ohno.jpg','./images/laksPics/pikachu.jpg','./images/laksPics/ILoveYou.jpg','./images/laksPics/pyaarAaya.jpg','./images/laksPics/duopic.jpg','./images/laksPics/lakskiss.jpg','./images/laksPics/Mgmall.jpg','./images/laksPics/pixar.jpg','./images/laksPics/justtheTwoOfUs.jpg'];
 
 Array.from(document.getElementsByClassName('videos')).forEach(e=>
     {
@@ -20,7 +20,7 @@ Array.from(document.getElementsByClassName('videos')).forEach(e=>
        `;
     })
 
-for(let i=0;i<22;i++)
+for(let i=0;i<21;i++)
     {
         document.getElementsByClassName('imageContainer')[i].style=`background: url('${images[i]}') no-repeat center center/contain;`;
     }
@@ -32,6 +32,7 @@ leftBtn.addEventListener('click', e => {
     if(targetSlide!=null)
     {
         distance+=targetSlide.getBoundingClientRect().x
+        console.log(distance);
         updateSlide(distance,targetSlide,currentSlide);
     }
     
@@ -53,7 +54,7 @@ rightBtn.addEventListener('click', e => {
 function updateSlide(distance, target,currentSlide) {
 
     console.log(distance);
-    carousalWhole.style.transform = 'translateX(-' + distance + 'px)';
+    carousalWhole.style = 'transform:translateX(-' + distance + 'px)';
     
     currentSlide.classList.remove('current-slide');
     target.classList.add('current-slide');
@@ -90,7 +91,7 @@ function updateDot(target,currentSlide)
         })
 }
 
-let VidArray=['','./videos_LaksuWeb/AllOutdoorVisits.mp4','./videos_LaksuWeb/Indoor.mp4','./videos_LaksuWeb/farewell_kiss.mp4','./videos_LaksuWeb/tooManyKisses.mp4','./videos_LaksuWeb/1yearanniversary.mp4','./videos_LaksuWeb/32ndGift.mp4','./videos_LaksuWeb/birthday.mp4','./videos_LaksuWeb/Cakebake.mp4','./videos_LaksuWeb/cutieLaks.mp4','./videos_LaksuWeb/Despacito.mp4','./videos_LaksuWeb/KuchhTohHai.mp4','./videos_LaksuWeb/laks_importance.mp4','./videos_LaksuWeb/laks_pikachu.mp4','./videos_LaksuWeb/laks_vid1.mp4','./videos_LaksuWeb/laks_vid2.mp4','./videos_LaksuWeb/laks_vid3.mp4','./videos_LaksuWeb/laksKiss.mp4','./videos_LaksuWeb/mallSnap.mp4','./videos_LaksuWeb/pixarsnap.mp4','./videos_LaksuWeb/WeCanMakeIt.mp4'];
+let VidArray=['./videos_LaksuWeb/FinalVideo.mp4','./videos_LaksuWeb/AllOutdoorVisits.mp4','./videos_LaksuWeb/Indoor.mp4','./videos_LaksuWeb/farewell_kiss.mp4','./videos_LaksuWeb/tooManyKisses.mp4','./videos_LaksuWeb/1yearanniversary.mp4','./videos_LaksuWeb/32ndGift.mp4','./videos_LaksuWeb/birthday.mp4','./videos_LaksuWeb/Cakebake.mp4','./videos_LaksuWeb/cutieLaks.mp4','./videos_LaksuWeb/Despacito.mp4','./videos_LaksuWeb/KuchhTohHai.mp4','./videos_LaksuWeb/laks_importance.mp4','./videos_LaksuWeb/laks_pikachu.mp4','./videos_LaksuWeb/laks_vid1.mp4','./videos_LaksuWeb/laks_vid2.mp4','./videos_LaksuWeb/laks_vid3.mp4','./videos_LaksuWeb/laksKiss.mp4','./videos_LaksuWeb/mallSnap.mp4','./videos_LaksuWeb/pixarsnap.mp4','./videos_LaksuWeb/WeCanMakeIt.mp4'];
 
 let videos=document.getElementsByClassName('videos');
 
